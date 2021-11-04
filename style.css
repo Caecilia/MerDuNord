@@ -4,7 +4,7 @@
 	font-family: calibri;
 	list-style-type: none;
 	font-size: 20px;
-	color: rgba(33, 48, 74, 1);
+	color: rgba(0, 34, 84, 1);
 }
 
 html, body {
@@ -24,7 +24,7 @@ header {
 	flex-direction: column;
 }
 
-footer {
+footer p, footer p a {
 	font-size: 15px;
 	text-align: center;
 }
@@ -75,4 +75,8 @@ p.geography_element {
 
 .italic_text {
 	font-style: italic;
+}
+section>ul>li {
+	list-style-type: circle;
+	margin : 0 0 0 40px;
 }
