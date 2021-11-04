@@ -24,6 +24,10 @@ header {
 	flex-direction: column;
 }
 
+footer {
+	margin: 0 0 20px 0 ;
+}
+
 footer p, footer p a {
 	font-size: 15px;
 	text-align: center;
@@ -79,4 +83,36 @@ p.geography_element {
 section>ul>li {
 	list-style-type: circle;
 	margin : 0 0 0 40px;
+}
+
+
+#content {
+	margin : 10px 0 0 0;
+	display: flex;
+    flex-wrap: wrap;
+	justify-content: center;
+	flex-direction: row;
+}
+
+.element {
+	background-color: rgba(120, 174, 255, 0.5);;
+	width: 200px;
+	height: 200px;
+	margin : 10px;
+	border-radius: 20px;
+	text-align:center;
+	
+	display: flex;
+	align-content: center;
+	flex-direction: column;
+}
+
+.element img {
+	width : 140px;
+	margin : auto;
+}
+
+.element p {
+	margin : 0 5px 5px 5px;
+	text-align: center;
 }
