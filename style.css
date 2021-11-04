@@ -4,11 +4,12 @@
 	font-family: calibri;
 	list-style-type: none;
 	font-size: 20px;
-	color: rgba(0, 34, 84, 1);
+	color: rgb(173, 206, 255, 1);
 }
 
 html, body {
 	height: 100%;
+	background-color: rgb(0, 9, 22);
 }
 
 
@@ -35,10 +36,12 @@ footer p, footer p a {
 
 h1 {
 	font-size: 60px;
+	color: rgb(0, 9, 22);
 }
 
 h2 {
 	font-size: 50px;
+	color: rgba(0, 9, 22, 1);
 }
 
 h3 {
@@ -49,7 +52,7 @@ h3 {
 
 hr {
 	margin : 20px 0 0 0;
-	color: rgba(33, 48, 74, 0.2);
+	color: rgb(173, 206, 255, 0.5)
 }
 
 #page_content, footer {
@@ -95,7 +98,7 @@ section>ul>li {
 }
 
 .element {
-	background-color: rgba(120, 174, 255, 0.5);
+	background-color: rgb(173, 206, 255, 1);
 	width: 200px;
 	height: 200px;
 	margin : 10px;
@@ -108,7 +111,7 @@ section>ul>li {
 }
 
 .element:hover {
-	background-color: rgba(120, 174, 255, 0.7);
+	background-color: rgb(119, 174, 255, 1);
 }
 
 
@@ -118,6 +121,7 @@ section>ul>li {
 }
 
 .element p {
+	color: rgb(0, 14, 34);
 	margin : 0 5px 5px 5px;
 	text-align: center;
 }
