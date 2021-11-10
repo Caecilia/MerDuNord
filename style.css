@@ -212,6 +212,10 @@ a:hover {
 	text-decoration: underline;
 }
 
+#history_section p {
+	margin-bottom: 20px;
+}
+
 /*Inspiré de https://codepen.io/htmlcodex/pen/LYGjPgV */
 
 *, *::before, *::after {
