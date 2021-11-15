@@ -120,6 +120,20 @@ hr {
 	color: rgb(167, 201, 216, 0.9);
 }
 
+table {
+	width: 100%;
+	border-collapse: collapse;
+	margin: 10px 0 20px 0;
+}
+
+table, th, td {
+	border: 1px solid rgb(167, 201, 216, 0.9);
+}
+
+td, th {
+	padding: 5px;
+}
+
 .anchor{
 	display: block;
 	height: 72px;
@@ -132,7 +146,7 @@ hr {
 }
 
 #page_content, footer {
-	width: 80%;
+	width: 65%;
 	margin: auto;
 }
 
@@ -144,15 +158,16 @@ section {
 	margin: 20px 0;
 }
 
-#geography_content {
+#flex_content {
 	display: flex;
+	justify-content: space-between;
 }
 
-p.geography_element {
-	padding: 0 20px 0 0;
+p.flex_element {
+	padding: 0 10px 0 0;
 }
 
-.geography_element img{
+.flex_element img{
 	width: 100%;
 }
 
@@ -169,7 +184,7 @@ section>ul>li, section>ul>li>ul>li {
 }
 
 
-#content {
+#representatives {
 	margin : 10px 0 0 0;
 	display: flex;
     flex-wrap: wrap;
@@ -177,7 +192,7 @@ section>ul>li, section>ul>li>ul>li {
 	flex-direction: row;
 }
 
-.element {
+.representative {
 	background-color: rgb(167, 201, 216, 1);
 	width: 200px;
 	height: 200px;
@@ -190,17 +205,17 @@ section>ul>li, section>ul>li>ul>li {
 	flex-direction: column;
 }
 
-.element:hover {
+.representative:hover {
 	background-color: rgb(84, 146, 167, 1);
 }
 
 
-.element img {
+.representative img {
 	width : 144px;
 	margin : auto;
 }
 
-.element p {
+.representative p {
 	color: rgb(21, 31, 55, 1);
 	margin : 0 5px 5px 5px;
 	text-align: center;
@@ -242,24 +257,24 @@ a:hover {
 	margin-left: -1px;
 }
 
-.container {
+.timeline_container {
 	padding: 15px 30px 15px 0;
 	position: relative;
 	background: inherit;
 	width: 50%;
 }
 
-.container.left {
+.timeline_container.timeline_container_left {
 	padding: 15px 30px 15px 0;
 	left: 0;
 }
 
-.container.right {
+.timeline_container.timeline_container_right {
 	padding: 15px 0 15px 30px;
 	left: 50%;
 }
 
-.container::after {
+.timeline_container::after {
 	content: '';
 	position: absolute;
 	width: 16px;
@@ -272,11 +287,11 @@ a:hover {
 	z-index: 1;
 }
 
-.container.right::after {
+.timeline_container.timeline_container_right::after {
 	left: -8px;
 }
 
-.container::before {
+.timeline_container::before {
 	content: '';
 	position: absolute;
 	width: 50px;
@@ -287,11 +302,11 @@ a:hover {
 	z-index: 1;
 }
 
-.container.right::before {
+.timeline_container.timeline_container_right::before {
 	left: 8px;
 }
 
-.container .date {
+.timeline_container .timeline_container_date {
 	position: absolute;
 	display: inline-block;
 	top: calc(50% - 8px);
@@ -304,15 +319,15 @@ a:hover {
 	z-index: 1;
 }
 
-.container.left .date {
+.timeline_container.timeline_container_left .timeline_container_date {
 	right: -75px;
 }
 
-.container.right .date {
+.timeline_container.timeline_container_right .timeline_container_date {
 	left: -75px;
 }
 
-.container .icon {
+.timeline_container .timeline_container_icon {
 	position: absolute;
 	display: inline-block;
 	width: 40px;
@@ -328,42 +343,43 @@ a:hover {
 	z-index: 1;
 }
 
-.container.left .icon {
+.timeline_container.timeline_container_left .timeline_container_icon {
 	right: 56px;
 }
 
-.container.right .icon {
+.timeline_container.timeline_container_right .timeline_container_icon {
 	left: 56px;
 }
 
-.container .content {
+.timeline_container .timeline_container_content {
 	background: rgb(167, 201, 216, 1);
 	position: relative;
 }
 
-.container.left .content {
+.timeline_container.timeline_container_left .timeline_container_content {
 	padding: 20px 90px 20px 20px;
 	border-radius: 0 500px 500px 0;
 }
 
-.container.right .content {
+.timeline_container.timeline_container_right .timeline_container_content {
 	padding: 20px 20px 20px 90px;
 	border-radius: 500px 0 0 500px;
 }
 
-.container .content h4 {
+.timeline_container .timeline_container_content h4 {
 	margin: 0 0 10px 0;
 	font-weight: bold;
 	color: rgb(21, 31, 55, 1);
 }
 
-.container .content p, .container .content p span {
+.timeline_container .timeline_container_content p, 
+.timeline_container .timeline_container_content p span {
 	margin: 0;
 	color: rgb(21, 31, 55, 1);
 	font-size: 15px;
 }
 
-.container .content p a {
+.timeline_container .timeline_container_content p a {
 	color: rgb(11, 66, 81, 1);
 	font-size: 15px;
 }
@@ -378,13 +394,12 @@ a:hover {
 		left: 30px;
 	}
 
-	.container {
+	.timeline_container {
 		width: 90%;
 	}
 
-
-	.container.left .date,
-	.container.right .date {
+	.timeline_container.timeline_container_left .timeline_container_date,
+	.timeline_container.timeline_container_right .timeline_container_date {
 		right: auto;
 		left: -90px;
 		padding: 5px;
@@ -393,30 +408,31 @@ a:hover {
 		border-radius: 5px;
 	}
 
-	.container.left .icon,
-	.container.right .icon {
+	.timeline_container.timeline_container_left .timeline_container_icon,
+	.timeline_container.timeline_container_right .timeline_container_icon {
 		right: auto;
 		left: 25px;
 	}
 
-	.container.left .content,
-	.container.right .content {
+	.timeline_container.timeline_container_left .timeline_container_content,
+	.timeline_container.timeline_container_right .timeline_container_content {
 		padding: 20px 20px 20px 90px;
 		border-radius: 20px;
 	}
 
-	.container.right,
-	.container.left {
+	.timeline_container.timeline_container_right,
+	.timeline_container.timeline_container_left {
 		left: 90px;
 		padding: 15px 0;
 	}
 
-	
-	.container.left::before, .container.right::before {
+	.timeline_container.timeline_container_left::before, 
+	.timeline_container.timeline_container_right::before {
 		left: -25px;
 	}
 
-	.container.left::after, .container.right::after  {
+	.timeline_container.timeline_container_left::after, 
+	.timeline_container.timeline_container_right::after {
 		visibility: hidden;
 	}
 }
@@ -426,39 +442,32 @@ a:hover {
 	nav {
 		visibility: hidden;
 	}
-	#geography_content {
+	#flex_content {
 		flex-direction: column;
+		justify-content: center;
 	}
 
-	#geography_content img {
-		padding : 20px 0 0 0;
+	#flex_content a.flex_element {
+		padding : 10px 0 0 0;
+		width: 70%;
+		margin: auto;
 	}
 }
 
 @media (max-width: 880px) {
-	.container {
+	.timeline_container {
 		width: 85%;
-	}
-	nav {
-		visibility: hidden;
 	}
 }
 
 @media (max-width: 600px) {
-	.container {
+	.timeline_container {
 		width: 80%;
-	}
-	nav {
-		visibility: hidden;
 	}
 }
 
 @media (max-width: 500px) {
-	.container {
+	.timeline_container {
 		width: 75%;
-	}
-
-	nav {
-		visibility: hidden;
 	}
 }
