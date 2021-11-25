@@ -57,7 +57,7 @@
 					<br /><br />
 					La frontière ouest est commune au département du Littoral du nord, celle de l'est avec la Forêt abyssale et celle du sud avec la Mer Kraken Rosalie (abrégée MKR). La frontière nord est la limite du pays du DirtyBiologistan. Il existe deux zones de partage entre la Mer du nord et les régions adjacentes : la zone de partage entre la Mer du nord la Forêt Abyssale de [331:0] à [340:50] et celle entre la Mer du nord la Mer Kraken Rosalie de [291:45] à [331:50].
 					</p>
-					<a class="flex_element" href="./img/map.png" target="_blank"><img src="./img/map.png" alt="Carte de la Mer du nord"></a>
+					<div class="flex_element"><img class="img_to_display" src="./img/map.png" alt="Carte de la Mer du nord" onclick="displayModal(this)"></div>
 				</div>
 				<hr />
 			</section>
@@ -275,7 +275,8 @@
 					<p class="flex_element" >
 						Les animaux symboles des mousaillons de la Mer du nord sont les <span class="bold_text"><a href="https://fr.wikipedia.org/wiki/Nudibranchia" target="_blank">nudibranches</a></span>, des mollusques gastéropodes sans coquille, aussi appelés limaces de mer. Cependant, les moussaillons n'aiment généralement pas cette dernière appellation.
 					</p>
-					<a class="flex_element" href="./img/nudibranche.png" target="_blank"><img src="./img/nudibranche.png" alt="Nudibranche"></a>
+					
+					<div class="flex_element"><img class="img_to_display" src="./img/nudibranche.png" alt="Nudibranche" onclick="displayModal(this)"></div>
 				</div>
 				<p>
 					
@@ -331,5 +332,24 @@
 			Le blason de la Mer du nord a été créé par <span class="bold_text">[311:150] Kamrinn-Volcan-Vertbleu</span>.</p>
 			<a href="https://discord.gg/nuURYepT" target="_blank"><img src="./img/discord.png" alt="Discord"></a>
 		</footer>
+
+		<div id="modal" onClick="closeModal()" class="modal">
+			<span class="close_modal">&times;</span>
+			<img class="modal_content" id="modal_img">
+		</div>
+
+		<script>
+			function displayModal(element){
+				let modal = document.getElementById("modal");
+				let modalImg = document.getElementById("modal_img");
+				modal.style.display = "block";
+				modalImg.src = element.src;
+			}
+
+			function closeModal() {
+				let modal = document.getElementById("modal");
+				modal.style.display = "none";
+			} 
+		</script>
 	</body>
 </html>
